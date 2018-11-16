@@ -45,6 +45,9 @@ a:active,
 a:hover {
   outline-width: 0;
 }
+a>h1:hover, a>h3:hover {
+  color: #7DACF7;
+}
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
