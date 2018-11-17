@@ -54,6 +54,7 @@ const IndexPage = () => (
           marginBottom: 0,
           textIndent: '1rem',
           fontStyle: 'italic',
+          textAlign: 'justify',
         }}
       >
         Years after her passing, Mandy's long lost little sister is now the same
@@ -86,12 +87,13 @@ const IndexPage = () => (
         </p>
       </div>
       <div
+        className="event-container"
         style={{
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
           margin: '0 auto',
-          padding: '0 8rem',
+          padding: '0 8vw',
         }}
       >
         <p style={{ marginTop: '1.5rem' }}>Event(s)</p>
@@ -115,6 +117,7 @@ const IndexPage = () => (
           style={{
             marginBottom: '0',
             color: 'hsl(0, 5%, 30%)',
+            textAlign: 'justify',
           }}
         >
           Lily calls off the wedding...or...insert depression related trigger
