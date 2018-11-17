@@ -29,21 +29,16 @@ const Header = ({ siteTitle }) => (
           alignItems: 'center',
         }}
       >
-        <Link
-          to='/'
-          style={{
-
-          }}
-        >
+        <Link to="/" style={{}}>
           <img
             src={brandIcon}
             width="36px"
-            alt='Watch What brand icon'
+            alt="Watch What brand icon"
             style={{
               marginBottom: 0,
               display: 'block',
             }}
-         />
+          />
         </Link>
         <Link
           to="/"
@@ -57,7 +52,7 @@ const Header = ({ siteTitle }) => (
               margin: '0 1rem',
             }}
           >
-            Watch What?
+            {siteTitle}
           </h1>
         </Link>
       </div>
