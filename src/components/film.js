@@ -2,7 +2,6 @@ import React from 'react'
 
 const Film = props => (
   <div>
-    {console.log(props)}
     <div
       className="film-container"
       style={{
@@ -23,7 +22,8 @@ const Film = props => (
         style={{
           position: 'relative',
           textAlign: 'center',
-          borderRadius: '0',
+          borderRadius: 0,
+          borderBottom: '1px solid black',
         }}
       >
         View Details
@@ -85,7 +85,7 @@ const Film = props => (
             transform: 'rotate(90deg)',
           }}
         >
-          {props.triggers.time}
+          {props.time}
         </p>
       </div>
       <div
@@ -105,8 +105,7 @@ const Film = props => (
             color: 'hsl(0, 5%, 60%)',
           }}
         >
-          {props.triggers.time}
-          min
+          {props.time} min
         </p>
         <p
           style={{
@@ -114,7 +113,7 @@ const Film = props => (
             color: 'hsl(0, 5%, 30%)',
           }}
         >
-          <strong>Category:</strong> {props.triggers.category}
+          <strong>Category:</strong> {props.category}
         </p>
         <p
           style={{
@@ -123,7 +122,7 @@ const Film = props => (
             textAlign: 'justify',
           }}
         >
-          {props.triggers.details}
+          {props.details}
         </p>
         <button
           style={{
