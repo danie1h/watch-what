@@ -18,7 +18,16 @@ const Film = props => (
         }}
       />
       <button
-        onClick={console.log('trigger show/hide')}
+        onClick={() => {
+          document.getElementsByClassName(props.title + '-details')[0].style
+            .display === 'none'
+            ? (document.getElementsByClassName(
+                props.title + '-details'
+              )[0].style.display = 'block')
+            : (document.getElementsByClassName(
+                props.title + '-details'
+              )[0].style.display = 'none')
+        }}
         style={{
           position: 'relative',
           textAlign: 'center',
@@ -32,6 +41,7 @@ const Film = props => (
     <div
       className={props.title + '-details'}
       style={{
+        display: 'none',
         width: '100%',
         border: '1px solid rgb(184, 182, 182)',
         borderRadius: '5px',
