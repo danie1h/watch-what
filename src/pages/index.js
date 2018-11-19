@@ -1,169 +1,63 @@
 import React from 'react'
 
 import Layout from '../components/layout'
+import Film from '../components/film'
+
+let filmList = [
+  {
+    title: 'A Walk To Remember 2',
+    duration: '148',
+    description: `Years after her passing, Mandy's long lost little sister is now the same age as Mandy when she was married. Struggling with the pressures of social norms paired with a rocky relationship, Lily is in a persistent state of mixed emotions. Life is short, but how avoid making wrong, hasty decisions. What is wrong anyways? More importantly, what's right?`,
+    triggers: {
+      category: 'Depression',
+      time: '140',
+      details:
+        'Lily calls off the wedding...or...insert depression related trigger here',
+    },
+    imageSource: 'https://source.unsplash.com/ZkrueVypQZU/1600x900',
+  },
+  {
+    title: 'Stars and Guitars',
+    duration: '122',
+    description:
+      'Phasellus porta vulputate massa, sed dapibus ante dapibus a. Praesent vestibulum neque velit, eget placerat quam sagittis vitae. Pellentesque vitae metus id nulla finibus efficitur mollis sit amet leo. Aenean vel diam urna. Suspendisse sed est nec lacus tristique consectetur at quis lacus. Aenean egestas nibh sed scelerisque accumsan. Suspendisse congue enim id turpis vehicula volutpat. Praesent sollicitudin diam sapien. Cras eu sodales tortor. Nunc sit amet urna tortor. Sed porta felis sit amet arcu tempor, sit amet ultrices elit bibendum. ',
+    triggers: {
+      category: 'Sexual Assault',
+      time: '12',
+      details:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    imageSource: 'https://source.unsplash.com/IiwYeihxC58/1600x900',
+  },
+  {
+    title: 'Frosted',
+    duration: '212',
+    description:
+      'Phasellus porta vulputate massa, sed dapibus ante dapibus a. Praesent vestibulum neque velit, eget placerat quam sagittis vitae. Pellentesque vitae metus id nulla finibus efficitur mollis sit amet leo. Aenean vel diam urna. Suspendisse sed est nec lacus tristique consectetur at quis lacus. Aenean egestas nibh sed scelerisque accumsan. Suspendisse congue enim id turpis vehicula volutpat. Praesent sollicitudin diam sapien. Cras eu sodales tortor. Nunc sit amet urna tortor. Sed porta felis sit amet arcu tempor, sit amet ultrices elit bibendum. ',
+    triggers: {
+      category: 'Addiction',
+      time: '34',
+      details:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    imageSource: 'https://source.unsplash.com/ZC0EbdLC8G0/1600x900',
+  },
+]
 
 const IndexPage = () => (
   <Layout>
-    <img
-      src="https://source.unsplash.com/ZkrueVypQZU/1600x900"
-      alt="sample img"
-      style={{
-        width: '100%',
-        margin: 0,
-      }}
-    />
-    <button
-      style={{
-        width: '100%',
-        margin: '1rem auto',
-      }}
-    >
-      View Details
-    </button>
-    <p>
-      ***Eventually, you can click the button (maybe, the pick or an
-      icon...still thinking about it), but for now this is just temporary for
-      visualization purposes***
-    </p>
-    <div
-      style={{
-        width: '100%',
-        border: '1px solid rgb(184, 182, 182)',
-        borderRadius: '5px',
-        marginBottom: '1.25rem',
-        padding: '1rem',
-      }}
-    >
-      <h1
-        style={{
-          marginBottom: 0,
-        }}
-      >
-        A Walk To Remember 2
-      </h1>
-      <p
-        style={{
-          marginBottom: '1rem',
-          color: 'hsl(0, 5%, 60%)',
-        }}
-      >
-        148min
-      </p>
-      <p
-        style={{
-          marginBottom: 0,
-          textIndent: '1rem',
-          fontStyle: 'italic',
-          textAlign: 'justify',
-        }}
-      >
-        Years after her passing, Mandy's long lost little sister is now the same
-        age as Mandy when she was married. Struggling with the pressures of
-        social norms paired with a rocky relationship, Lily is in a persistent
-        state of mixed emotions. Life is short, but how avoid making wrong,
-        hasty decisions. What is wrong anyways? More importantly, what's right?
-      </p>
-      <div
-        style={{
-          width: '70%',
-          height: '10px',
-          border: '1px solid rgb(184, 182, 182)',
-          borderRadius: '5px',
-          margin: '1.25rem auto',
-          padding: '1rem',
-        }}
-      >
-        <p
-          style={{
-            backgroundColor: 'red',
-            borderRadius: '5px',
-            padding: '5px 2px',
-            color: 'black',
-            float: 'right',
-            transform: 'rotate(90deg)',
-          }}
-        >
-          140min
-        </p>
-      </div>
-      <div
-        className="event-container"
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          margin: '0 auto',
-          padding: '0 8vw',
-        }}
-      >
-        <p style={{ marginTop: '1.5rem' }}>Event(s)</p>
-        <p
-          style={{
-            marginBottom: '0',
-            color: 'hsl(0, 5%, 60%)',
-          }}
-        >
-          @140min
-        </p>
-        <p
-          style={{
-            marginBottom: '0',
-            color: 'hsl(0, 5%, 30%)',
-          }}
-        >
-          <strong>Category:</strong> Depression
-        </p>
-        <p
-          style={{
-            marginBottom: '0',
-            color: 'hsl(0, 5%, 30%)',
-            textAlign: 'justify',
-          }}
-        >
-          Lily calls off the wedding...or...insert depression related trigger
-          here
-        </p>
-        <button
-          style={{
-            margin: '.5rem auto',
-          }}
-        >
-          Send Notification
-        </button>
-      </div>
-    </div>
-    <img
-      src="https://source.unsplash.com/IiwYeihxC58/1600x900"
-      alt="sample img"
-      style={{
-        width: '100%',
-        margin: 0,
-      }}
-    />
-    <button
-      style={{
-        width: '100%',
-        margin: '1rem auto',
-      }}
-    >
-      View Details
-    </button>
-    <img
-      src="https://source.unsplash.com/ZC0EbdLC8G0/1600x900"
-      alt="sample img"
-      style={{
-        width: '100%',
-        margin: 0,
-      }}
-    />
-    <button
-      style={{
-        width: '100%',
-        margin: '1rem auto',
-      }}
-    >
-      View Details
-    </button>
+    {filmList.map((film, index) => {
+      return (
+        <Film
+          key={index}
+          title={film.title}
+          duration={film.duration}
+          description={film.description}
+          triggers={film.triggers}
+          imageSource={film.imageSource}
+        />
+      )
+    })}
   </Layout>
 )
 
