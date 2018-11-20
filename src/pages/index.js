@@ -1,7 +1,8 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import Film from '../components/film'
+import FilmDisplay from '../components/filmDisplay'
+import FilmDetails from '../components/filmDetails'
 import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => (
@@ -18,17 +19,21 @@ const IndexPage = ({ data }) => (
       })
 
       return (
-        <Film
-          key={index}
-          title={film.node.frontmatter.title}
-          duration={film.node.frontmatter.duration}
-          description={film.node.rawMarkdownBody}
-          imageSource={film.node.frontmatter.imageSource}
-          category={film.node.frontmatter.category}
-          time={film.node.frontmatter.time}
-          details={film.node.frontmatter.details}
-          movieTriggers={movieTriggers}
-        />
+        <div key={index}>
+          <FilmDisplay
+            imageSource={film.node.frontmatter.imageSource}
+            title={film.node.frontmatter.title}
+          />
+          <FilmDetails
+            title={film.node.frontmatter.title}
+            duration={film.node.frontmatter.duration}
+            description={film.node.rawMarkdownBody}
+            category={film.node.frontmatter.category}
+            time={film.node.frontmatter.time}
+            details={film.node.frontmatter.details}
+            movieTriggers={movieTriggers}
+          />
+        </div>
       )
     })}
   </Layout>
