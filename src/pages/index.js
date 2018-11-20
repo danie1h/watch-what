@@ -7,6 +7,16 @@ import { graphql } from 'gatsby'
 const IndexPage = ({ data }) => (
   <Layout>
     {data.allMarkdownRemark.edges.map((film, index) => {
+      const movieTriggers = film.node.frontmatter.triggers.map(trigger => {
+        const parsedTrigger = trigger.split('|')
+
+        return {
+          category: parsedTrigger[0],
+          time: parsedTrigger[1],
+          details: parsedTrigger[2],
+        }
+      })
+
       return (
         <Film
           key={index}
@@ -17,6 +27,7 @@ const IndexPage = ({ data }) => (
           category={film.node.frontmatter.category}
           time={film.node.frontmatter.time}
           details={film.node.frontmatter.details}
+          movieTriggers={movieTriggers}
         />
       )
     })}
@@ -38,6 +49,7 @@ export const query = graphql`
             time
             details
             imageSource
+            triggers
           }
         }
       }
