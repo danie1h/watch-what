@@ -116,6 +116,11 @@ button {
   background-color: hsl(138, 50%, 43%);
   box-shadow: 0 3px 5px hsl(138, 30%, 35%);
 }
+button:hover {
+  cursor: pointer;
+  background-color: hsl(138, 40%, 53%);
+  box-shadow: 0 3px 10px hsl(138, 20%, 35%);
+}
 input {
   padding: 10px;
   border-color: hsl(217, 76%, 80%);
