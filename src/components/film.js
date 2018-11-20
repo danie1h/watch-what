@@ -15,6 +15,7 @@ const Film = props => (
           width: '100%',
           margin: 0,
           boxShadow: '0 3px 5px hsl(138, 30%, 35%)',
+          borderRadius: '5px 0 0 5px',
         }}
       />
       <button
@@ -31,8 +32,8 @@ const Film = props => (
         style={{
           position: 'relative',
           textAlign: 'center',
-          borderRadius: 0,
-          borderBottom: '1px solid black',
+          borderRadius: '0 5px 5px 0',
+          borderBottom: '1px solid white',
         }}
       >
         View Details
@@ -75,6 +76,11 @@ const Film = props => (
       >
         {props.description}
       </p>
+      <p>
+        ********Orange symbols below will have 3 different hues representing
+        different scene categories. WIP a mathematical solution to adjust
+        position based on total duration and scene time.********
+      </p>
       <div
         style={{
           width: '70%',
@@ -82,21 +88,42 @@ const Film = props => (
           border: '1px solid rgb(184, 182, 182)',
           borderRadius: '5px',
           margin: '1.25rem auto',
-          padding: '1rem',
+          paddingBottom: '1rem',
         }}
       >
         <p
           style={{
-            backgroundColor: 'red',
-            borderRadius: '5px',
+            position: 'absolute',
+            left: '50%',
+            backgroundColor: 'hsl(30, 100%, 47%)',
+            width: '5px',
+            height: '2rem',
+            borderRadius: '0 0 5px 5px',
             padding: '5px 2px',
-            color: 'black',
-            float: 'right',
-            transform: 'rotate(90deg)',
           }}
-        >
-          {props.time}
-        </p>
+        />
+        <p
+          style={{
+            position: 'absolute',
+            left: '35%',
+            backgroundColor: 'hsl(30, 100%, 57%)',
+            width: '5px',
+            height: '2rem',
+            borderRadius: '0 0 5px 5px',
+            padding: '5px 2px',
+          }}
+        />
+        <p
+          style={{
+            position: 'absolute',
+            left: '65%',
+            backgroundColor: 'hsl(40, 80%, 67%)',
+            width: '5px',
+            height: '2rem',
+            borderRadius: '0 0 5px 5px',
+            padding: '5px 2px',
+          }}
+        />
       </div>
       <div
         className="event-container"
@@ -108,28 +135,27 @@ const Film = props => (
           padding: '0 8vw',
         }}
       >
-        <p style={{ marginTop: '1.5rem' }}>Event(s)</p>
+        <p
+          style={{
+            marginBottom: '0',
+            color: 'hsl(0, 5%, 30%)',
+          }}
+        >
+          <strong>Scene:</strong> {props.category}
+        </p>
         <p
           style={{
             marginBottom: '0',
             color: 'hsl(0, 5%, 60%)',
           }}
         >
-          {props.time} min
+          @ {props.time} min
         </p>
         <p
           style={{
             marginBottom: '0',
             color: 'hsl(0, 5%, 30%)',
-          }}
-        >
-          <strong>Category:</strong> {props.category}
-        </p>
-        <p
-          style={{
-            marginBottom: '0',
-            color: 'hsl(0, 5%, 30%)',
-            textAlign: 'justify',
+            textAlign: 'justify ',
           }}
         >
           {props.details}
