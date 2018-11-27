@@ -36,7 +36,7 @@ const TimelineBar = props => (
     <p
       style={{
         position: 'inline',
-        color: 'hsl(0, 5%, 60%)',
+        color: 'hsl(0, 5%, 45%)',
         margin: 'auto 0',
       }}
     >
@@ -46,7 +46,7 @@ const TimelineBar = props => (
       style={{
         width: '70%',
         height: '10px',
-        border: '1px solid hsl(0, 5%, 60%)',
+        border: '1px solid hsl(0, 5%, 45%)',
         borderRadius: '10px',
         paddingBottom: '1rem',
         margin: '0 .5rem 0 .5rem',
@@ -55,7 +55,7 @@ const TimelineBar = props => (
     >
       {showTriggers(props.movieTriggers, props.duration)}
     </div>
-    <p style={{ color: 'hsl(0, 5%, 60%)', margin: 'auto 0' }}>
+    <p style={{ color: 'hsl(0, 5%, 45%)', margin: 'auto 0' }}>
       {props.duration}
     </p>
   </div>
