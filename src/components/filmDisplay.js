@@ -27,11 +27,11 @@ const FilmDisplay = props => (
         const itemClicked = document.getElementsByClassName(
           props.title + '-details'
         )[0]
-        if (itemClicked.style.display === 'none') {
-          itemClicked.style.display = 'block'
+        if (itemClicked.className.includes('deactivate-details')) {
+          itemClicked.className = props.title + '-details activate-details'
           event.target.className = 'dropdown-arrow-btn-active'
         } else {
-          itemClicked.style.display = 'none'
+          itemClicked.className = props.title + '-details deactivate-details'
           event.target.className = 'dropdown-arrow-btn'
         }
       }}

@@ -663,6 +663,16 @@ a > h3:hover {
   transform: rotate(-135deg);
   transition: 0.5s;
 }
+.activate-details {
+  max-height: 200vh;
+  overflow: hidden;
+  transition: 0.5s ease-in;
+}
+.deactivate-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-out;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 80%;

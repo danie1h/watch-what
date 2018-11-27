@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FilmSummary = props => (
-  <div>
+  <div style={{ marginTop: '1rem' }}>
     <h2
       style={{
         marginBottom: 0,
