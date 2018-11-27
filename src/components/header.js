@@ -1,65 +1,100 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import brandIcon from '../images/watch-what-icon.png'
+
 const Header = ({ siteTitle }) => (
   <div
+    className="header-container"
     style={{
-      background: 'rebeccapurple',
+      background: 'white',
       marginBottom: '1.45rem',
+      boxShadow: '0px 1px 5px #377266',
     }}
   >
     <div
+      className="header-contents"
       style={{
         margin: '0 auto',
         maxWidth: 960,
-        display: 'flex',
         padding: '1.45rem 1.0875rem',
+        display: 'flex',
       }}
     >
-      <h1 style={{
-        margin: 0,
-       }}>
+      <div
+        className="navbar-brand"
+        style={{
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <Link to="/" style={{}}>
+          <img
+            src={brandIcon}
+            width="36px"
+            alt="Watch What brand icon"
+            style={{
+              marginBottom: 0,
+              display: 'block',
+            }}
+          />
+        </Link>
         <Link
           to="/"
           style={{
-            color: 'white',
+            color: '#31C0A4',
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          <h1
+            style={{
+              margin: '0 1rem',
+            }}
+          >
+            {siteTitle}
+          </h1>
         </Link>
-      </h1>
-      <div style={{
-        display: 'flex',
-        justifyContents: 'flex-end',
-        float: 'right',
-      }}>
-      <h3 style={{
-        margin: '0 20px',
-       }}>
+      </div>
+      <div
+        className="navbar-contents"
+        style={{
+          display: 'flex',
+          width: '100%',
+          justifyContent: 'flex-end',
+          alignItems: 'center',
+        }}
+      >
         <Link
           to="/about/"
           style={{
-            color: 'white',
+            color: '#31C0A4',
             textDecoration: 'none',
           }}
         >
-          About
+          <h3
+            style={{
+              margin: '0 1rem',
+            }}
+          >
+            About
+          </h3>
         </Link>
-      </h3>
-      <h3 style={{
-        margin: '0 20px',
-       }}>
         <Link
           to="/contact/"
           style={{
-            color: 'white',
+            color: '#31C0A4',
             textDecoration: 'none',
           }}
         >
-          Contact
+          <h3
+            style={{
+              margin: '0 1rem',
+            }}
+          >
+            Contact
+          </h3>
         </Link>
-      </h3>
       </div>
     </div>
   </div>

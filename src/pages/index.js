@@ -1,17 +1,57 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
+import FilmDisplay from '../components/filmDisplay'
+import FilmDetails from '../components/filmDetails'
+import { graphql } from 'gatsby'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
+    {data.allMarkdownRemark.edges.map((film, index) => {
+      const movieTriggers = film.node.frontmatter.triggers.map(trigger => {
+        const parsedTrigger = trigger.split('|')
+
+        return {
+          category: parsedTrigger[0],
+          time: parsedTrigger[1],
+          details: parsedTrigger[2],
+        }
+      })
+
+      return (
+        <div key={index}>
+          <FilmDisplay
+            imageSource={film.node.frontmatter.imageSource}
+            title={film.node.frontmatter.title}
+          />
+          <FilmDetails
+            title={film.node.frontmatter.title}
+            duration={film.node.frontmatter.duration}
+            description={film.node.rawMarkdownBody}
+            movieTriggers={movieTriggers}
+          />
+        </div>
+      )
+    })}
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___title], order: ASC }) {
+      edges {
+        node {
+          rawMarkdownBody
+          frontmatter {
+            title
+            duration
+            imageSource
+            triggers
+          }
+        }
+      }
+    }
+  }
+`
