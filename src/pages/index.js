@@ -28,9 +28,6 @@ const IndexPage = ({ data }) => (
             title={film.node.frontmatter.title}
             duration={film.node.frontmatter.duration}
             description={film.node.rawMarkdownBody}
-            category={film.node.frontmatter.category}
-            time={film.node.frontmatter.time}
-            details={film.node.frontmatter.details}
             movieTriggers={movieTriggers}
           />
         </div>
@@ -50,9 +47,6 @@ export const query = graphql`
           frontmatter {
             title
             duration
-            category
-            time
-            details
             imageSource
             triggers
           }

@@ -1,9 +1,6 @@
 ---
 title: Stars and Guitars
 duration: 122
-category: Sexual Assault
-time: 12
-details: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 imageSource: https://source.unsplash.com/IiwYeihxC58/1600x900
 triggers:
   - Sexual Assault|12|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -1,9 +1,6 @@
 ---
 title: A Walk To Remember 2
 duration: 148
-category: Depression
-time: 140
-details: Lily calls off the wedding...or...insert depression related trigger here
 imageSource: https://source.unsplash.com/ZkrueVypQZU/1600x900
 triggers:
   - Depression|70|...insert depression related trigger here

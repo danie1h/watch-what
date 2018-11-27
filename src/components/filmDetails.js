@@ -21,12 +21,11 @@ const FilmDetails = props => (
       duration={props.duration}
       description={props.description}
     />
-    <TimelineBar duration={props.duration} />
-    <FilmTriggers
-      category={props.category}
-      time={props.time}
-      details={props.details}
+    <TimelineBar
+      duration={props.duration}
+      movieTriggers={props.movieTriggers}
     />
+    <FilmTriggers movieTriggers={props.movieTriggers} />
     <div
       style={{
         margin: '1rem 0 .5rem 0',

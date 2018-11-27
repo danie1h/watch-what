@@ -1,9 +1,6 @@
 ---
 title: Frosted
 duration: 212
-category: Addiction
-time: 34
-details: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 imageSource: https://source.unsplash.com/ZC0EbdLC8G0/1600x900
 triggers:
   - Addiction|34|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

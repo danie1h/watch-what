@@ -642,6 +642,15 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
+.depression {
+  background-color: hsl(30, 100%, 47%);
+}
+.addiction {
+  background-color: hsl(40, 80%, 67%);
+}
+.sexual-assault {
+  background-color: hsl(30, 100%, 57%);
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 80%;

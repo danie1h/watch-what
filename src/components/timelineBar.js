@@ -1,5 +1,26 @@
 import React from 'react'
 
+const showTriggers = (movieTriggers, duration) => {
+  let currentPosition = 0 // tracks location of former triggers, if applicable
+  return movieTriggers.map((trigger, index) => {
+    const triggerPosition = (trigger.time / duration) * 100 - currentPosition
+    currentPosition = triggerPosition
+    return (
+      <p
+        key={index}
+        className={trigger.category.toLowerCase().replace(/\s/g, '-')}
+        style={{
+          width: '5px',
+          height: '2rem',
+          borderRadius: '0 0 5px 5px',
+          padding: '5px 2px',
+          marginLeft: `${triggerPosition}%`,
+        }}
+      />
+    )
+  })
+}
+
 const TimelineBar = props => (
   <div
     className="timeline-bar"
@@ -27,41 +48,10 @@ const TimelineBar = props => (
         borderRadius: '10px',
         paddingBottom: '1rem',
         margin: '0 .5rem 0 .5rem',
+        display: 'flex',
       }}
     >
-      <p
-        style={{
-          position: 'absolute',
-          left: '50%',
-          backgroundColor: 'hsl(30, 100%, 47%)',
-          width: '5px',
-          height: '2rem',
-          borderRadius: '0 0 5px 5px',
-          padding: '5px 2px',
-        }}
-      />
-      <p
-        style={{
-          position: 'absolute',
-          left: '35%',
-          backgroundColor: 'hsl(30, 100%, 57%)',
-          width: '5px',
-          height: '2rem',
-          borderRadius: '0 0 5px 5px',
-          padding: '5px 2px',
-        }}
-      />
-      <p
-        style={{
-          position: 'absolute',
-          left: '65%',
-          backgroundColor: 'hsl(40, 80%, 67%)',
-          width: '5px',
-          height: '2rem',
-          borderRadius: '0 0 5px 5px',
-          padding: '5px 2px',
-        }}
-      />
+      {showTriggers(props.movieTriggers, props.duration)}
     </div>
     <p style={{ color: 'hsl(0, 5%, 60%)', margin: 'auto 0' }}>
       {props.duration}
