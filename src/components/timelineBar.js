@@ -25,10 +25,12 @@ const TimelineBar = props => (
   <div
     className="timeline-bar"
     style={{
-      margin: '1rem 0 2rem 0',
+      margin: '1rem 0 0 0',
+      padding: '1rem 0 2rem 0',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      backgroundColor: 'hsl(0, 0%, 95%)',
     }}
   >
     <p
