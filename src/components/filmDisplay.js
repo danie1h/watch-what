@@ -47,6 +47,8 @@ const FilmDisplay = props => (
         src={dropDownArrow}
         style={{
           margin: '0 auto',
+          width: '24px',
+          pointerEvents: 'none',
         }}
         alt="dropdown arrow"
       />
