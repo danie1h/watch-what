@@ -24,7 +24,6 @@ const Header = ({ siteTitle }) => (
       <div
         className="navbar-brand"
         style={{
-          width: '100%',
           display: 'flex',
           alignItems: 'center',
         }}
