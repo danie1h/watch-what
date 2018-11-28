@@ -7,14 +7,13 @@ const FilmDisplay = props => (
     className="film-container"
     style={{
       position: 'relative',
-      width: '100%',
-      display: 'flex',
     }}
   >
     <img
       src={props.imageSource}
       alt="sample img"
       style={{
+        objectFit: 'fill',
         boxShadow: '0 3px 5px hsl(0, 0%, 20%)',
         borderRadius: '5px',
       }}
