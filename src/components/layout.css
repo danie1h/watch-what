@@ -651,6 +651,8 @@ pre tt:after {
   background-color: hsl(152, 62%, 97%);
 }
 .dropdown-arrow-btn {
+  bottom: 4%;
+  right: 1.5%;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg); /* Safari & Chrome */
   -moz-transform: rotate(45deg); /* Firefox */
@@ -662,7 +664,10 @@ pre tt:after {
   -ms-transition: 0.5s; /* Internet Explorer */
   -o-transition: 0.5s; /* Opera */
 }
+
 .dropdown-arrow-btn-active {
+  bottom: 4%;
+  right: 1.5%;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135); /* Safari & Chrome */
   -moz-transform: rotate(-135); /* Firefox */
@@ -736,5 +741,10 @@ pre tt:after {
   }
   .dropdown-arrow {
     width: 12px;
+  }
+  .dropdown-arrow-btn,
+  .dropdown-arrow-btn-active {
+    bottom: 7%;
+    right: 2.5%;
   }
 }
