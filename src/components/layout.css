@@ -650,14 +650,6 @@ pre tt:after {
 .nav-item:hover {
   background-color: hsl(152, 62%, 97%);
 }
-.dropdown-arrow {
-  width: 24px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg); /* Safari & Chrome */
-  -moz-transform: rotate(-45deg); /* Firefox */
-  -ms-transform: rotate(-45deg); /* Internet Explorer */
-  -o-transform: rotate(-45deg); /* Opera */
-}
 .dropdown-arrow-btn {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg); /* Safari & Chrome */
@@ -682,6 +674,14 @@ pre tt:after {
   -ms-transition: 0.5s; /* Internet Explorer */
   -o-transition: 0.5s; /* Opera */
 }
+.dropdown-arrow {
+  width: 24px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); /* Safari & Chrome */
+  -moz-transform: rotate(-45deg); /* Firefox */
+  -ms-transform: rotate(-45deg); /* Internet Explorer */
+  -o-transform: rotate(-45deg); /* Opera */
+}
 .activate-details {
   max-height: 200vh;
   overflow: hidden;
@@ -698,7 +698,9 @@ pre tt:after {
 .navbar-contents {
   display: flex;
 }
-
+.navbar-brand {
+  width: 100%;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 80%;
