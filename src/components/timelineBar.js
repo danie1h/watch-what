@@ -25,16 +25,18 @@ const TimelineBar = props => (
   <div
     className="timeline-bar"
     style={{
-      margin: '1rem 0 2rem 0',
+      margin: '1rem 0 0 0',
+      padding: '1rem 0 2rem 0',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      backgroundColor: 'hsl(0, 0%, 95%)',
     }}
   >
     <p
       style={{
         position: 'inline',
-        color: 'hsl(0, 5%, 60%)',
+        color: 'hsl(0, 5%, 45%)',
         margin: 'auto 0',
       }}
     >
@@ -44,7 +46,7 @@ const TimelineBar = props => (
       style={{
         width: '70%',
         height: '10px',
-        border: '1px solid hsl(0, 5%, 60%)',
+        border: '1px solid hsl(0, 5%, 45%)',
         borderRadius: '10px',
         paddingBottom: '1rem',
         margin: '0 .5rem 0 .5rem',
@@ -53,7 +55,7 @@ const TimelineBar = props => (
     >
       {showTriggers(props.movieTriggers, props.duration)}
     </div>
-    <p style={{ color: 'hsl(0, 5%, 60%)', margin: 'auto 0' }}>
+    <p style={{ color: 'hsl(0, 5%, 45%)', margin: 'auto 0' }}>
       {props.duration}
     </p>
   </div>

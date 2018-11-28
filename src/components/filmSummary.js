@@ -1,18 +1,18 @@
 import React from 'react'
 
 const FilmSummary = props => (
-  <div>
-    <h1
+  <div style={{ marginTop: '1rem' }}>
+    <h2
       style={{
         marginBottom: 0,
       }}
     >
       {props.title}
-    </h1>
+    </h2>
     <p
       style={{
         marginBottom: '1rem',
-        color: 'hsl(0, 5%, 60%)',
+        color: 'hsl(0, 5%, 45%)',
       }}
     >
       {props.duration}

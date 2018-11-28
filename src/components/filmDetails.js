@@ -6,14 +6,13 @@ import FilmTriggers from './filmTriggers'
 
 const FilmDetails = props => (
   <div
-    className={props.title + '-details'}
+    className={props.title + '-details deactivate-details'}
     style={{
-      display: 'none',
       width: '100%',
       border: '1px solid rgb(184, 182, 182)',
       borderRadius: '5px',
-      marginBottom: '0',
-      padding: '1rem',
+      margin: '1rem 0',
+      padding: '0 1rem',
     }}
   >
     <FilmSummary
@@ -28,7 +27,7 @@ const FilmDetails = props => (
     <FilmTriggers movieTriggers={props.movieTriggers} />
     <div
       style={{
-        margin: '1rem 0 .5rem 0',
+        margin: '1rem 0 1.5rem 0',
         width: '100%',
         display: 'flex',
         justifyContent: 'center',

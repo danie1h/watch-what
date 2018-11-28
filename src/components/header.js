@@ -7,9 +7,9 @@ const Header = ({ siteTitle }) => (
   <div
     className="header-container"
     style={{
-      background: 'white',
+      background: 'hsl(152, 30%, 90%)',
       marginBottom: '1.45rem',
-      boxShadow: '0px 1px 5px #377266',
+      boxShadow: '0px 1px 5px hsl(152, 30%, 50%)',
     }}
   >
     <div
@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
       style={{
         margin: '0 auto',
         maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
+        padding: '.2rem 1.0875rem',
         display: 'flex',
       }}
     >
@@ -56,15 +56,20 @@ const Header = ({ siteTitle }) => (
           </h1>
         </Link>
       </div>
-      <div
-        className="navbar-contents"
+      <label
+        for="toggle"
+        className="toggle-item"
         style={{
-          display: 'flex',
-          width: '100%',
-          justifyContent: 'flex-end',
-          alignItems: 'center',
+          color: '#31C0A4',
+          fontSize: '200%',
+          padding: '.5rem',
+          justifySelf: 'flex-end',
         }}
       >
+        &#9776;
+      </label>
+      <input type="checkbox" id="toggle" style={{ display: 'none' }} />
+      <div className="navbar-contents">
         <Link
           to="/about/"
           style={{
@@ -73,8 +78,10 @@ const Header = ({ siteTitle }) => (
           }}
         >
           <h3
+            className="nav-item"
             style={{
-              margin: '0 1rem',
+              margin: '0',
+              padding: '1rem',
             }}
           >
             About
@@ -88,8 +95,10 @@ const Header = ({ siteTitle }) => (
           }}
         >
           <h3
+            className="nav-item"
             style={{
-              margin: '0 1rem',
+              margin: 'auto',
+              padding: '1rem',
             }}
           >
             Contact

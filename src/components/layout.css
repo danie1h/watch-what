@@ -47,10 +47,6 @@ a:active,
 a:hover {
   outline-width: 0;
 }
-a > h1:hover,
-a > h3:hover {
-  color: hsl(217, 49%, 53%);
-}
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
@@ -113,13 +109,13 @@ button {
   padding: 10px;
   border: 0;
   border-radius: 20px;
-  background-color: hsl(138, 50%, 43%);
-  box-shadow: 0 3px 5px hsl(138, 30%, 35%);
+  background-color: hsl(217, 50%, 45%);
+  box-shadow: 1px 1px 3px hsl(217, 50%, 65%);
 }
 button:hover {
   cursor: pointer;
-  background-color: hsl(138, 40%, 53%);
-  box-shadow: 0 3px 10px hsl(138, 20%, 35%);
+  background-color: hsl(217, 60%, 55%);
+  box-shadow: 0 3px 10px hsl(217, 50%, 67%);
 }
 input {
   padding: 10px;
@@ -241,7 +237,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 h1 {
   margin-left: 0;
@@ -651,11 +647,92 @@ pre tt:after {
 .sexual-assault {
   background-color: hsl(30, 100%, 57%);
 }
+.nav-item:hover {
+  background-color: hsl(152, 62%, 97%);
+}
+.dropdown-arrow {
+  width: 24px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); /* Safari & Chrome */
+  -moz-transform: rotate(-45deg); /* Firefox */
+  -ms-transform: rotate(-45deg); /* Internet Explorer */
+  -o-transform: rotate(-45deg); /* Opera */
+}
+.dropdown-arrow-btn {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); /* Safari & Chrome */
+  -moz-transform: rotate(45deg); /* Firefox */
+  -ms-transform: rotate(45deg); /* Internet Explorer */
+  -o-transform: rotate(45deg); /* Opera */
+  transition: 0.5s;
+  -webkit-transition: 0.5s; /* Safari & Chrome */
+  -moz-transition: 0.5s; /* Firefox */
+  -ms-transition: 0.5s; /* Internet Explorer */
+  -o-transition: 0.5s; /* Opera */
+}
+.dropdown-arrow-btn-active {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135); /* Safari & Chrome */
+  -moz-transform: rotate(-135); /* Firefox */
+  -ms-transform: rotate(-135); /* Internet Explorer */
+  -o-transform: rotate(-135); /* Opera */
+  transition: 0.5s;
+  -webkit-transition: 0.5s; /* Safari & Chrome */
+  -moz-transition: 0.5s; /* Firefox */
+  -ms-transition: 0.5s; /* Internet Explorer */
+  -o-transition: 0.5s; /* Opera */
+}
+.activate-details {
+  max-height: 200vh;
+  overflow: hidden;
+  transition: 0.5s ease-in;
+}
+.deactivate-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-out;
+}
+.toggle-item {
+  display: none;
+}
+.navbar-contents {
+  display: flex;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 80%;
   }
+  .header-contents {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .toggle-item {
+    display: block;
+  }
+  .toggle-item:hover {
+    cursor: pointer;
+    background-color: hsl(152, 62%, 97%);
+  }
+  .navbar-brand {
+    width: 80vw;
+  }
+  .navbar-contents {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  .nav-item {
+    width: 93vw;
+    text-align: center;
+  }
+  #toggle:checked + .navbar-contents {
+    display: block;
+  }
   .event-container {
     padding: '0 1vw';
+  }
+  .dropdown-arrow {
+    width: 12px;
   }
 }

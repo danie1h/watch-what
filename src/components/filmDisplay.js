@@ -1,9 +1,13 @@
 import React from 'react'
 
+import dropDownArrow from '../images/down-arrow.png'
+
 const FilmDisplay = props => (
   <div
     className="film-container"
     style={{
+      position: 'relative',
+      width: '100%',
       display: 'flex',
     }}
   >
@@ -11,31 +15,42 @@ const FilmDisplay = props => (
       src={props.imageSource}
       alt="sample img"
       style={{
-        width: '100%',
-        margin: 0,
-        boxShadow: '0 3px 5px hsl(138, 30%, 35%)',
-        borderRadius: '5px 0 0 5px',
+        boxShadow: '0 3px 5px hsl(0, 0%, 20%)',
+        borderRadius: '5px',
       }}
     />
     <button
-      onClick={() => {
-        document.getElementsByClassName(props.title + '-details')[0].style
-          .display === 'none'
-          ? (document.getElementsByClassName(
-              props.title + '-details'
-            )[0].style.display = 'block')
-          : (document.getElementsByClassName(
-              props.title + '-details'
-            )[0].style.display = 'none')
+      className="dropdown-arrow-btn"
+      onClick={event => {
+        // display or hide film details on click
+        // update classname to apply transitions to the button
+        const itemClicked = document.getElementsByClassName(
+          props.title + '-details'
+        )[0]
+        if (itemClicked.className.includes('deactivate-details')) {
+          itemClicked.className = props.title + '-details activate-details'
+          event.target.className = 'dropdown-arrow-btn-active'
+        } else {
+          itemClicked.className = props.title + '-details deactivate-details'
+          event.target.className = 'dropdown-arrow-btn'
+        }
       }}
       style={{
-        position: 'relative',
-        textAlign: 'center',
-        borderRadius: '0 5px 5px 0',
-        borderBottom: '1px solid white',
+        position: 'absolute',
+        bottom: '4%',
+        right: '2%',
+        borderRadius: '5px',
+        display: 'flex',
       }}
     >
-      View Details
+      <img
+        className="dropdown-arrow"
+        src={dropDownArrow}
+        style={{
+          margin: '0 auto',
+        }}
+        alt="dropdown arrow"
+      />
     </button>
   </div>
 )

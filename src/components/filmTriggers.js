@@ -15,28 +15,29 @@ const FilmTriggers = props => (
     {props.movieTriggers.map((trigger, index) => {
       return (
         <div key={index}>
-          <p
+          <h3
             style={{
               marginTop: '.5rem',
               marginBottom: '0',
-              color: 'hsl(0, 5%, 30%)',
+              color: 'hsl(0, 5%, 25%)',
             }}
           >
-            <strong>Scene:</strong> {trigger.category}
+            {trigger.category} Scene
+          </h3>
+          <p
+            style={{
+              marginBottom: '1rem',
+              color: 'hsl(0, 5%, 45%)',
+            }}
+          >
+            at {trigger.time} min
           </p>
           <p
             style={{
-              marginBottom: '0',
-              color: 'hsl(0, 5%, 60%)',
-            }}
-          >
-            @{trigger.time}
-            min
-          </p>
-          <p
-            style={{
-              marginBottom: '.5rem',
-              color: 'hsl(0, 5%, 30%)',
+              marginBottom: '1rem',
+              color: 'hsl(0, 5%, 25%)',
+              textIndent: '1rem',
+              fontStyle: 'italic',
               textAlign: 'justify ',
             }}
           >
