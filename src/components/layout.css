@@ -711,8 +711,8 @@ pre tt:after {
     font-size: 80%;
   }
   .header-contents {
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   .toggle-item {
     display: block;
@@ -721,8 +721,11 @@ pre tt:after {
     cursor: pointer;
     background-color: hsl(152, 62%, 97%);
   }
+  h1 {
+    font-size: 1.5em;
+  }
   .navbar-brand {
-    width: 80vw;
+    width: auto;
   }
   .navbar-contents {
     flex-direction: column;
@@ -734,7 +737,7 @@ pre tt:after {
     text-align: center;
   }
   #toggle:checked + .navbar-contents {
-    display: block;
+    display: flex;
   }
   .event-container {
     padding: '0 1vw';
