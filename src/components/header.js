@@ -7,9 +7,9 @@ const Header = ({ siteTitle }) => (
   <div
     className="header-container"
     style={{
-      background: 'hsl(152, 30%, 90%)',
+      background: 'hsl(202, 35%, 30%)',
       marginBottom: '1.45rem',
-      boxShadow: '0px 1px 5px hsl(152, 30%, 50%)',
+      boxShadow: '0px 1px 10px hsl(202, 35%, 20%)',
     }}
   >
     <div
