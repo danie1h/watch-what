@@ -651,7 +651,7 @@ pre tt:after {
   background-color: hsl(152, 62%, 97%);
 }
 .dropdown-arrow-btn {
-  bottom: 48px;
+  bottom: 18px;
   right: 12px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg); /* Safari & Chrome */
@@ -666,7 +666,7 @@ pre tt:after {
 }
 
 .dropdown-arrow-btn-active {
-  bottom: 48px;
+  bottom: 18px;
   right: 12px;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135); /* Safari & Chrome */
@@ -747,7 +747,7 @@ pre tt:after {
   }
   .dropdown-arrow-btn,
   .dropdown-arrow-btn-active {
-    bottom: 42px;
+    bottom: 12px;
     right: 6px;
   }
 }
