@@ -62,7 +62,6 @@ const Header = ({ siteTitle }) => (
           color: '#31C0A4',
           fontSize: '200%',
           padding: '.5rem',
-          justifySelf: 'flex-end',
         }}
       >
         &#9776;
