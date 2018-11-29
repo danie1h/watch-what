@@ -42,7 +42,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: '#31C0A4',
+            color: 'hsl(168, 59%, 47%)',
             textDecoration: 'none',
           }}
         >
@@ -59,7 +59,7 @@ const Header = ({ siteTitle }) => (
         for="toggle"
         className="toggle-item"
         style={{
-          color: '#31C0A4',
+          color: 'hsl(168, 59%, 47%)',
           fontSize: '200%',
           padding: '.5rem',
         }}
@@ -71,7 +71,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/about/"
           style={{
-            color: '#31C0A4',
+            color: 'hsl(168, 59%, 47%)',
             textDecoration: 'none',
           }}
         >
@@ -88,7 +88,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/contact/"
           style={{
-            color: '#31C0A4',
+            color: 'hsl(168, 59%, 47%)',
             textDecoration: 'none',
           }}
         >
