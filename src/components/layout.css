@@ -64,10 +64,6 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-mark {
-  background-color: #ff0;
-  color: #000;
-}
 small {
   font-size: 80%;
 }
@@ -109,13 +105,13 @@ button {
   padding: 10px;
   border: 0;
   border-radius: 20px;
-  background-color: hsl(217, 50%, 45%);
-  box-shadow: 1px 1px 3px hsl(217, 50%, 65%);
+  background-color: hsl(202, 65%, 35%);
+  box-shadow: 3px 3px 5px hsl(202, 45%, 30%);
 }
 button:hover {
   cursor: pointer;
-  background-color: hsl(217, 60%, 55%);
-  box-shadow: 0 3px 10px hsl(217, 50%, 67%);
+  background-color: hsl(202, 55%, 30%);
+  box-shadow: 3px 3px 10px hsl(202, 45%, 30%);
 }
 input {
   padding: 10px;
@@ -639,16 +635,16 @@ pre tt:after {
   content: '';
 }
 .depression {
-  background-color: hsl(30, 100%, 47%);
+  background-color: hsl(32, 100%, 50%);
 }
 .addiction {
-  background-color: hsl(40, 80%, 67%);
+  background-color: hsl(26, 90%, 45%);
 }
 .sexual-assault {
-  background-color: hsl(30, 100%, 57%);
+  background-color: hsl(32, 95%, 65%);
 }
 .nav-item:hover {
-  background-color: hsl(152, 62%, 97%);
+  background-color: hsl(202, 35%, 40%);
 }
 .dropdown-arrow-btn {
   bottom: 18px;
@@ -663,8 +659,14 @@ pre tt:after {
   -moz-transition: 0.5s; /* Firefox */
   -ms-transition: 0.5s; /* Internet Explorer */
   -o-transition: 0.5s; /* Opera */
+  box-shadow: 3px 3px 5px hsl(202, 45%, 30%);
 }
-
+.dropdown-arrow-btn:hover {
+  box-shadow: 3px 3px 10px hsl(202, 35%, 40%);
+}
+.dropdown-arrow-btn-active:hover {
+  box-shadow: -3px -3px 10px hsl(202, 35%, 40%);
+}
 .dropdown-arrow-btn-active {
   bottom: 18px;
   right: 12px;
@@ -678,6 +680,7 @@ pre tt:after {
   -moz-transition: 0.5s; /* Firefox */
   -ms-transition: 0.5s; /* Internet Explorer */
   -o-transition: 0.5s; /* Opera */
+  box-shadow: -3px -3px 5px hsl(202, 45%, 30%);
 }
 .dropdown-arrow {
   width: 24px;

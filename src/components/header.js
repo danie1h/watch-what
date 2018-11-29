@@ -7,9 +7,9 @@ const Header = ({ siteTitle }) => (
   <div
     className="header-container"
     style={{
-      background: 'hsl(152, 30%, 90%)',
+      background: 'hsl(202, 35%, 30%)',
       marginBottom: '1.45rem',
-      boxShadow: '0px 1px 5px hsl(152, 30%, 50%)',
+      boxShadow: '0px 1px 10px hsl(202, 35%, 20%)',
     }}
   >
     <div
@@ -42,7 +42,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: '#31C0A4',
+            color: 'hsl(168, 59%, 47%)',
             textDecoration: 'none',
           }}
         >
@@ -59,7 +59,7 @@ const Header = ({ siteTitle }) => (
         for="toggle"
         className="toggle-item"
         style={{
-          color: '#31C0A4',
+          color: 'hsl(168, 59%, 47%)',
           fontSize: '200%',
           padding: '.5rem',
         }}
@@ -71,7 +71,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/about/"
           style={{
-            color: '#31C0A4',
+            color: 'hsl(168, 59%, 47%)',
             textDecoration: 'none',
           }}
         >
@@ -88,7 +88,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/contact/"
           style={{
-            color: '#31C0A4',
+            color: 'hsl(168, 59%, 47%)',
             textDecoration: 'none',
           }}
         >
