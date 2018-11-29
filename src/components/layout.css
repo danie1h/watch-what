@@ -666,8 +666,8 @@ pre tt:after {
 }
 
 .dropdown-arrow-btn-active {
-  bottom: 0;
-  right: 0%;
+  bottom: 48px;
+  right: 12px;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135); /* Safari & Chrome */
   -moz-transform: rotate(-135); /* Firefox */
