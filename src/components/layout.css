@@ -688,7 +688,7 @@ pre tt:after {
   -o-transform: rotate(-45deg); /* Opera */
 }
 .activate-details {
-  max-height: 200vh;
+  max-height: 1000vh;
   overflow: hidden;
   transition: 0.5s ease-in;
 }
