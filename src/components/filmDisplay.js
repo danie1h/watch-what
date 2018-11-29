@@ -19,6 +19,20 @@ const FilmDisplay = props => (
         marginBottom: '0',
       }}
     />
+    <h5
+      style={{
+        position: 'absolute',
+        top: '5px',
+        right: '5px',
+        padding: '.5rem',
+        borderRadius: '5px',
+        color: 'hsl(0, 0%, 100%)',
+        backgroundColor: 'hsl(202, 15%, 25%)',
+        opacity: '.75',
+      }}
+    >
+      {props.title}
+    </h5>
     <button
       className="dropdown-arrow-btn"
       onClick={event => {
