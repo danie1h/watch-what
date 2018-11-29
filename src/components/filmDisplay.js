@@ -16,6 +16,7 @@ const FilmDisplay = props => (
         objectFit: 'fill',
         boxShadow: '0 3px 5px hsl(0, 0%, 20%)',
         borderRadius: '5px',
+        bottomBorder: '0',
       }}
     />
     <button
