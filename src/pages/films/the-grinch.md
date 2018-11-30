@@ -1,7 +1,7 @@
 ---
-title: Smokes
+title: The Grinch
 duration: 122
-imageSource: https://source.unsplash.com/K36HnrLZ0Kw/1600x900
+imageSource: https://image.tmdb.org/t/p/w1280/zRDkmww7Bu11wiz2g86RxSreiY4.jpg
 triggers:
   - Sexual Assault|12|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   - Addiction|34|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

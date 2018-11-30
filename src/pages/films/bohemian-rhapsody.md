@@ -1,7 +1,7 @@
 ---
-title: Stars and Guitars
+title: Bohemian Rhapsody
 duration: 122
-imageSource: https://source.unsplash.com/IiwYeihxC58/1600x900
+imageSource: https://image.tmdb.org/t/p/w1280/pbXgLEYh8rlG2Km5IGZPnhcnuSz.jpg
 triggers:
   - Sexual Assault|12|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   - Addiction|34|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
