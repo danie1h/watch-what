@@ -1,9 +1,9 @@
 ---
+filmId: 360920
 title: The Grinch
 duration: 122
 imageSource: https://image.tmdb.org/t/p/w1280/zRDkmww7Bu11wiz2g86RxSreiY4.jpg
 triggers:
-  - Sexual Assault|12|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   - Addiction|34|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   - Depression|70|...insert depression related trigger here
 ---

@@ -7,27 +7,33 @@ import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    {data.allMarkdownRemark.edges.map((film, index) => {
-      const movieTriggers = film.node.frontmatter.triggers.map(trigger => {
-        const parsedTrigger = trigger.split('|')
+    {data.allFilmNode.edges.map((film, index) => {
+      if (film.node.filmIdJoin === null) {
+        return null
+      }
 
-        return {
-          category: parsedTrigger[0],
-          time: parsedTrigger[1],
-          details: parsedTrigger[2],
+      const movieTriggers = film.node.filmIdJoin.frontmatter.triggers.map(
+        trigger => {
+          const parsedTrigger = trigger.split('|')
+
+          return {
+            category: parsedTrigger[0],
+            time: parsedTrigger[1],
+            details: parsedTrigger[2],
+          }
         }
-      })
+      )
 
       return (
-        <div key={index}>
+        <div key={film.node.filmId}>
           <FilmDisplay
-            imageSource={film.node.frontmatter.imageSource}
-            title={film.node.frontmatter.title}
+            imageSource={film.node.backdrop}
+            title={film.node.title}
           />
           <FilmDetails
-            title={film.node.frontmatter.title}
-            duration={film.node.frontmatter.duration}
-            description={film.node.rawMarkdownBody}
+            title={film.node.title}
+            duration={film.node.filmIdJoin.frontmatter.duration}
+            description={film.node.overview}
             movieTriggers={movieTriggers}
           />
         </div>
@@ -40,16 +46,19 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___title], order: ASC }) {
+    allFilmNode(sort: { fields: title, order: ASC }) {
       edges {
         node {
-          rawMarkdownBody
-          frontmatter {
-            title
-            duration
-            imageSource
-            triggers
+          filmId
+          filmIdJoin {
+            frontmatter {
+              duration
+              triggers
+            }
           }
+          title
+          backdrop
+          overview
         }
       }
     }
