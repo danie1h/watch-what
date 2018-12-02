@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import dropDownArrow from '../images/down-arrow.png'
 
@@ -9,8 +10,8 @@ const FilmDisplay = props => (
       position: 'relative',
     }}
   >
-    <img
-      src={props.imageSource}
+    <Img
+      fluid={props.imageSource}
       alt="sample img"
       style={{
         objectFit: 'fill',
