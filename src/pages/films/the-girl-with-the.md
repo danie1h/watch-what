@@ -1,9 +1,10 @@
 ---
-filmId: 338952
-title: 'Fantastic Beasts: The Crimes of Grindelwald'
-duration: 212
-imageSource: https://image.tmdb.org/t/p/w1280/xgbeBCjmFpRYHDF7tQ7U98EREWp.jpg
+filmId: 446807
+title: The Girl in the Spider's Web
+duration: 122
+imageSource: https://image.tmdb.org/t/p/w1280/zYZeoInDyCziwCD8psOaryL8ntR.jpg
 triggers:
+  - Sexual Assault|12|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   - Addiction|34|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae commodo neque. Curabitur euismod velit et laoreet condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   - Depression|70|...insert depression related trigger here
 ---
