@@ -27,7 +27,7 @@ const Footer = ({ siteTitle }) => (
       <div style={{ margin: 'auto 0 ' }}>
         <p
           style={{
-            color: 'hsl(168, 59%, 47%)',
+            color: 'white',
             textDecoration: 'none',
             margin: '0',
           }}
@@ -36,7 +36,7 @@ const Footer = ({ siteTitle }) => (
         </p>
         <p
           style={{
-            color: 'hsl(168, 59%, 47%)',
+            color: 'white',
             textDecoration: 'none',
             margin: '0',
           }}
