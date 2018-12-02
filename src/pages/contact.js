@@ -5,7 +5,7 @@ import rocketIcon from '../images/rocket.png'
 
 const ContactPage = () => (
   <Layout>
-    <div className="contact-container">
+    <div className="contact-container" style={{ minHeight: '81.4vh' }}>
       <h1 style={{ textAlign: 'center', color: 'hsl(217, 41%, 35%)' }}>
         Reach Out and Send Our Team a Message!
       </h1>
