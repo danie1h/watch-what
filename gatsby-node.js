@@ -1,7 +1,9 @@
 /**
  * Extract movie data from tmdb and store in nodes
+ * Store and link backdrop image for gastby image optimization
  */
 const axios = require('axios')
+const gatsbySourceFileSystem = require('gatsby-source-filesystem')
 
 const TMDB_API_KEY = 'ec848a93c99a2066df5df5721112e618'
 const getFilmData = () =>
@@ -44,4 +46,29 @@ exports.sourceNodes = async ({
     const node = Object.assign({}, filmData, nodeMeta)
     createNode(node)
   })
+}
+
+exports.onCreateNode = async ({
+  node,
+  actions,
+  store,
+  cache,
+  createNodeId,
+}) => {
+  if (node.internal.type !== 'FilmNode') {
+    return
+  }
+  const { createNode } = actions
+
+  const fileNode = await gatsbySourceFileSystem.createRemoteFileNode({
+    url: node.backdrop,
+    store,
+    cache,
+    createNode,
+    createNodeId,
+  })
+
+  if (fileNode) {
+    node.image___NODE = fileNode.id
+  }
 }

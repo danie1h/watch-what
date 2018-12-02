@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => (
       return (
         <div key={film.node.filmId}>
           <FilmDisplay
-            imageSource={film.node.backdrop}
+            imageSource={film.node.backdropImage.childImageSharp.fluid}
             title={film.node.title}
           />
           <FilmDetails
@@ -57,8 +57,14 @@ export const query = graphql`
             }
           }
           title
-          backdrop
           overview
+          backdropImage: image {
+            childImageSharp {
+              fluid(maxWidth: 960, jpegProgressive: true, quality: 80) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
