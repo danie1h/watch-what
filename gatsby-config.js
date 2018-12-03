@@ -30,7 +30,7 @@ module.exports = {
         description:
           'Box Office Movie Film Notification for Sexual Assualt & Depression Related Triggers',
         start_url: '/',
-        background_color: 'white',
+        background_color: '#663399',
         theme_color: '#663399',
         display: 'standalone',
         icon: `${__dirname}/src/images/watch-what-icon.png`,
