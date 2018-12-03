@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import brandIcon from '../images/watch-what-icon.png'
+import LogoIcon from './logoImage'
 
 const Header = ({ siteTitle }) => (
   <div
@@ -29,15 +29,7 @@ const Header = ({ siteTitle }) => (
         }}
       >
         <Link to="/" style={{}}>
-          <img
-            src={brandIcon}
-            width="36px"
-            alt="Watch What brand icon"
-            style={{
-              marginBottom: 0,
-              display: 'block',
-            }}
-          />
+          <LogoIcon />
         </Link>
         <Link
           to="/"

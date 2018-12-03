@@ -12,7 +12,7 @@ const FilmDisplay = props => (
   >
     <Img
       fluid={props.imageSource}
-      alt="sample img"
+      alt="film backdrop image"
       style={{
         objectFit: 'fill',
         boxShadow: '0 3px 5px hsl(0, 0%, 20%)',

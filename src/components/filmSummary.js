@@ -22,7 +22,6 @@ const FilmSummary = props => (
       style={{
         marginBottom: 0,
         textIndent: '1rem',
-        fontStyle: 'italic',
         textAlign: 'justify',
       }}
     >
