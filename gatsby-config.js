@@ -27,11 +27,13 @@ module.exports = {
       options: {
         name: 'Watch What?',
         short_name: 'Watch What?',
+        description:
+          'Box Office Movie Film Notification for Sexual Assualt & Depression Related Triggers',
         start_url: '/',
-        background_color: '#663399',
+        background_color: 'white',
         theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/watch-what-icon.png', // This path is relative to the root of the site.
+        display: 'standalone',
+        icon: `${__dirname}/src/images/watch-what-icon.png`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
