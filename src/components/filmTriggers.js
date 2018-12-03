@@ -37,7 +37,6 @@ const FilmTriggers = props => (
               marginBottom: '1rem',
               color: 'hsl(0, 5%, 25%)',
               textIndent: '1rem',
-              fontStyle: 'italic',
               textAlign: 'justify ',
             }}
           >
