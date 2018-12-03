@@ -33,7 +33,8 @@ module.exports = {
         background_color: 'white',
         theme_color: '#663399',
         display: 'standalone',
-        icon: `${__dirname}/src/images/watch-what-icon.png`, // This path is relative to the root of the site.
+        icon: `${__dirname}/src/images/watch-what-icon.png`,
+        legacy: true, // enable for apple to display icons
       },
     },
     'gatsby-plugin-offline',
