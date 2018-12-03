@@ -33,7 +33,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'standalone',
-        icon: `${__dirname}/src/images/watch-what-icon.png`,
+        icon: `${__dirname}/src/images/what-what-mobile-icon.png`,
         legacy: true, // enable for apple to display icons
       },
     },
