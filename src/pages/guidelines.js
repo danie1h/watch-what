@@ -5,15 +5,25 @@ import { graphql } from 'gatsby'
 
 const GuidelinesPage = ({ data }) => (
   <Layout>
-    <div style={{ color: 'hsl(202, 35%, 30%)' }}>
+    <div
+      style={{
+        color: 'hsl(202, 35%, 20%)',
+        backgroundColor: 'hsl(202, 25%, 90%)',
+        padding: '1rem',
+      }}
+    >
       <h1>Guidelines</h1>
-      <p>
-        We've formulated a set of guidelines to constitue which scenes are
+      <p style={{ margin: 0 }}>
+        We've formulated a set of standards to constitue which scenes should be
         reported as film triggers.
       </p>
     </div>
     <div
-      style={{ color: 'hsl(202, 35%, 30%)' }}
+      style={{
+        color: 'hsl(202, 35%, 20%)',
+        padding: '1rem',
+        backgroundColor: 'hsl(202, 25%, 95%)',
+      }}
       dangerouslySetInnerHTML={{ __html: data.file.childMarkdownRemark.html }}
     />
   </Layout>
