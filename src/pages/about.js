@@ -69,6 +69,22 @@ const AboutPage = () => (
           info="Aenean cursus imperdiet nunc porttitor sodales. Nulla facilisi. Phasellus tincidunt eros est, quis tincidunt urna aliquet ac. Vivamus rutrum ligula id ultricies sagittis. Vestibulum velit diam, mollis sed posuere sit amet, posuere id tellus."
         />
       </div>
+      <div className="contact-container">
+        <div
+          id="get-involved"
+          style={{
+            minHeight: '50vh',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <p>Contribute to the cause...</p>
+          <p>Our Contact Info...</p>
+          <button>Send an email</button>
+        </div>
+      </div>
       <div
         style={{
           minHeight: '50vh',
