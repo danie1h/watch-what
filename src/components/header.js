@@ -95,6 +95,23 @@ const Header = ({ siteTitle }) => (
           </h3>
         </Link>
         <Link
+          to="/resources/"
+          style={{
+            color: 'hsl(168, 59%, 47%)',
+            textDecoration: 'none',
+          }}
+        >
+          <h3
+            className="nav-item"
+            style={{
+              margin: 'auto',
+              padding: '1rem',
+            }}
+          >
+            Resources
+          </h3>
+        </Link>
+        <Link
           to="/guidelines/"
           style={{
             color: 'hsl(168, 59%, 47%)',
