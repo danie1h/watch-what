@@ -115,19 +115,12 @@ button:hover {
 }
 input {
   padding: 10px;
-  border-color: hsl(217, 76%, 80%);
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px hsl(0, 1%, 53%);
 }
 optgroup,
 select,
 textarea {
   font: inherit;
-  margin: 5;
   padding: 10px;
-  border-color: hsl(217, 76%, 80%);
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px hsl(0, 1%, 53%);
 }
 optgroup {
   font-weight: 700;
