@@ -4,6 +4,8 @@ html {
 }
 body {
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 article,
 aside,
@@ -115,19 +117,12 @@ button:hover {
 }
 input {
   padding: 10px;
-  border-color: hsl(217, 76%, 80%);
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px hsl(0, 1%, 53%);
 }
 optgroup,
 select,
 textarea {
   font: inherit;
-  margin: 5;
   padding: 10px;
-  border-color: hsl(217, 76%, 80%);
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px hsl(0, 1%, 53%);
 }
 optgroup {
   font-weight: 700;
@@ -245,8 +240,6 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -262,8 +255,6 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -279,8 +270,6 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -296,8 +285,6 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -313,8 +300,6 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -330,8 +315,6 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -654,7 +637,7 @@ pre tt:after {
   -moz-transform: rotate(45deg); /* Firefox */
   -ms-transform: rotate(45deg); /* Internet Explorer */
   -o-transform: rotate(45deg); /* Opera */
-  transition: 0.5s;
+  transition: 0.25s;
   -webkit-transition: 0.5s; /* Safari & Chrome */
   -moz-transition: 0.5s; /* Firefox */
   -ms-transition: 0.5s; /* Internet Explorer */
@@ -675,7 +658,7 @@ pre tt:after {
   -moz-transform: rotate(-135); /* Firefox */
   -ms-transform: rotate(-135); /* Internet Explorer */
   -o-transform: rotate(-135); /* Opera */
-  transition: 0.5s;
+  transition: 0.25s;
   -webkit-transition: 0.5s; /* Safari & Chrome */
   -moz-transition: 0.5s; /* Firefox */
   -ms-transition: 0.5s; /* Internet Explorer */
@@ -693,12 +676,12 @@ pre tt:after {
 .activate-details {
   max-height: 1000vh;
   overflow: hidden;
-  transition: 0.5s ease-in;
+  transition: 0.25s ease-in;
 }
 .deactivate-details {
   max-height: 0;
   overflow: hidden;
-  transition: 0.5s ease-out;
+  transition: 0.15s ease-out;
 }
 .toggle-item {
   display: none;
@@ -708,6 +691,13 @@ pre tt:after {
 }
 .navbar-brand {
   width: 100%;
+}
+.contact-container {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+#connected-icon {
+  animation: fullRotation 5s infinite linear;
 }
 @media only screen and (max-width: 480px) {
   html {
@@ -752,5 +742,30 @@ pre tt:after {
   .dropdown-arrow-btn-active {
     bottom: 12px;
     right: 6px;
+  }
+  .about-profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: unset;
+  }
+  #contact-details {
+    margin-top: 2rem;
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
+  #connected-icon {
+    z-index: 0;
+  }
+}
+
+@keyframes fullRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
   }
 }

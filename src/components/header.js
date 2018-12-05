@@ -61,6 +61,40 @@ const Header = ({ siteTitle }) => (
       <input type="checkbox" id="toggle" style={{ display: 'none' }} />
       <div className="navbar-contents">
         <Link
+          to="/resources/"
+          style={{
+            color: 'hsl(168, 59%, 47%)',
+            textDecoration: 'none',
+          }}
+        >
+          <h3
+            className="nav-item"
+            style={{
+              margin: 'auto',
+              padding: '1rem',
+            }}
+          >
+            Resources
+          </h3>
+        </Link>
+        <Link
+          to="/guidelines/"
+          style={{
+            color: 'hsl(168, 59%, 47%)',
+            textDecoration: 'none',
+          }}
+        >
+          <h3
+            className="nav-item"
+            style={{
+              margin: 'auto',
+              padding: '1rem',
+            }}
+          >
+            Guidelines
+          </h3>
+        </Link>
+        <Link
           to="/about/"
           style={{
             color: 'hsl(168, 59%, 47%)',
@@ -75,23 +109,6 @@ const Header = ({ siteTitle }) => (
             }}
           >
             About
-          </h3>
-        </Link>
-        <Link
-          to="/contact/"
-          style={{
-            color: 'hsl(168, 59%, 47%)',
-            textDecoration: 'none',
-          }}
-        >
-          <h3
-            className="nav-item"
-            style={{
-              margin: 'auto',
-              padding: '1rem',
-            }}
-          >
-            Contact
           </h3>
         </Link>
       </div>
