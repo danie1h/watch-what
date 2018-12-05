@@ -7,9 +7,10 @@ const GuidelinesPage = ({ data }) => (
   <Layout>
     <div
       style={{
-        color: 'hsl(202, 35%, 20%)',
-        backgroundColor: 'hsl(202, 25%, 90%)',
-        padding: '1rem',
+        color: 'hsl(217, 41%, 23%)',
+        backgroundColor: 'hsl(168, 59%, 85%)',
+        padding: '3rem 1.5rem',
+        fontSize: '1.25em',
       }}
     >
       <h1>Guidelines</h1>
@@ -20,9 +21,10 @@ const GuidelinesPage = ({ data }) => (
     </div>
     <div
       style={{
-        color: 'hsl(202, 35%, 20%)',
-        padding: '1rem',
-        backgroundColor: 'hsl(202, 25%, 95%)',
+        color: 'hsl(217, 41%, 23%)',
+        fontSize: '1.25em',
+        padding: '3rem 3rem',
+        backgroundColor: 'hsl(168, 59%, 95%)',
       }}
       dangerouslySetInnerHTML={{ __html: data.file.childMarkdownRemark.html }}
     />
