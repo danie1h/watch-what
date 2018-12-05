@@ -33,14 +33,14 @@ const AboutPage = () => (
         <img src={missionIcon} alt="mission concepts" />
         <p
           style={{
-            fontSize: '2.5em',
-            color: 'hsl(217, 15%, 30%)',
-            padding: '1rem',
+            fontSize: '1.5em',
+            color: 'hsl(217, 45%, 25%)',
+            padding: '1rem 2rem',
             textAlign: 'center',
           }}
         >
-          We illuminate awareness for film viewers to prepare for or avoid
-          intrusive thoughts
+          To help viewers anticipate and potentially avoid content that may
+          cause damaging or intrusive thoughts
         </p>
       </div>
       <div
@@ -88,20 +88,19 @@ const AboutPage = () => (
           backgroundColor: 'hsl(168, 59%, 90%)',
           minHeight: '50vh',
           display: 'flex',
-          flexDirection: 'row-reverse',
-          alignItems: 'center',
         }}
       >
         <div
+          id="contact-details"
           style={{
-            width: '50%',
             backgroundColor: 'hsl(217, 41%, 35%)',
             padding: '1rem',
             borderRadius: '24px 0 0 24px',
             color: 'hsl(217, 41%, 95%)',
+            boxShadow: '0 5px 2px hsl(217, 41%, 20%)',
           }}
         >
-          <h2 style={{ fontSize: '3em' }}>Contact Us</h2>
+          <h2 style={{ fontSize: '3em' }}> Let's Connect</h2>
           <hr style={{ backgroundColor: 'hsl(217, 41%, 65%)' }} />
           <p style={{ fontSize: '1.5em' }}>
             <strong>Email:</strong>{' '}
@@ -117,7 +116,7 @@ const AboutPage = () => (
           </p>
         </div>
         <div style={{ width: '50%', padding: '5%' }}>
-          <img src={connectedIcon} alt="connect with us" />
+          <img id="connected-icon" src={connectedIcon} alt="connect with us" />
         </div>
       </div>
       <div
