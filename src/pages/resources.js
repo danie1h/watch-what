@@ -26,6 +26,7 @@ const ResourcesPage = () => (
       <div
         id="resource-info"
         style={{
+          width: '100%',
           color: 'hsl(217, 41%, 23%)',
           fontSize: '1.25em',
           padding: '3rem 3rem',
