@@ -697,7 +697,7 @@ pre tt:after {
   align-items: center;
 }
 #connected-icon {
-  animation: test 2s infinite;
+  animation: fullRotation 5s infinite linear;
 }
 @media only screen and (max-width: 480px) {
   html {
@@ -761,7 +761,7 @@ pre tt:after {
   }
 }
 
-@keyframes test {
+@keyframes fullRotation {
   0% {
     transform: rotate(0deg);
   }
