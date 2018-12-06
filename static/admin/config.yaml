@@ -8,13 +8,27 @@ public_folder: /uploads
 collections:
   - name: film_triggers
     label: Film Triggers
-    folder: src/content/filmTriggers
+    folder: src/content/film-triggers
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { name: 'filmId', label: 'FilmId' }
       - { name: 'duration', label: 'Film Duration' }
-      - { name: 'body', label: 'Triggers', widget: 'markdown' }
+          fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { name: 'filmId', label: 'FilmId' }
+      - { name: 'duration', label: 'Film Duration' }
+      - {
+          label: 'Triggers',
+          name: 'triggers',
+          widget: 'list',
+          fields:
+            [
+              { label: 'Category', name: 'category', widget: 'string' },
+              { label: 'Event Time', name: 'eventTime', widget: 'string' },
+              { label: 'Description', name: 'description', widget: 'string' },
+            ],
+        }
   - name: guidelines
     label: Guidelines
     folder: src/content/guidelines
