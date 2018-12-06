@@ -1,7 +1,7 @@
 ---
 title: The Girl in the Spider's Web
 filmId: '446807'
-duration: '180'
+duration: '185'
 triggers:
   - category: Addiction
     description: >-
