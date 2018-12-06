@@ -12,8 +12,13 @@ collections:
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { name: 'filmId', label: 'FilmId' }
-      - { name: 'duration', label: 'Film Duration' }
+      - { name: 'filmId', label: 'FilmId', widget: 'number', valueType: 'int' }
+      - {
+          name: 'duration',
+          label: 'Film Duration',
+          widget: 'number',
+          valueType: 'int',
+        }
       - {
           label: 'Triggers',
           name: 'triggers',
@@ -21,7 +26,12 @@ collections:
           fields:
             [
               { label: 'Category', name: 'category', widget: 'string' },
-              { label: 'Event Time', name: 'eventTime', widget: 'string' },
+              {
+                label: 'Event Time',
+                name: 'eventTime',
+                widget: 'number',
+                valueType: 'int',
+              },
               { label: 'Description', name: 'description', widget: 'string' },
             ],
         }
