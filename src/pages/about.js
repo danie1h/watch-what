@@ -2,11 +2,11 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import Profile from '../components/profile'
-import tmdbLogo from '../images/tmdb.png'
-import sgProfileImg from '../images/sg_profile.jpg'
-import dhProfileImg from '../images/dh_profile.jpg'
+import sgProfileImg from '../uploads/sg_profile.jpg'
+import dhProfileImg from '../uploads/dh_profile.jpg'
 import missionIcon from '../images/mission-icon.svg'
 import connectedIcon from '../images/connected-icon.svg'
+import tmdbLogo from '../images/tmdb.png'
 
 const AboutPage = () => (
   <Layout>
