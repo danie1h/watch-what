@@ -3,7 +3,8 @@ import React from 'react'
 const showTriggers = (movieTriggers, duration) => {
   let currentPosition = 0 // tracks location of former triggers, if applicable
   return movieTriggers.map((trigger, index) => {
-    const triggerPosition = (trigger.time / duration) * 100 - currentPosition
+    const triggerPosition =
+      (trigger.eventTime / duration) * 100 - currentPosition
     currentPosition = triggerPosition
     return (
       <p

@@ -7,22 +7,10 @@ import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    {data.allFilmNode.edges.map((film, index) => {
+    {data.allFilmNode.edges.map(film => {
       if (film.node.filmIdJoin === null) {
         return null
       }
-
-      const movieTriggers = film.node.filmIdJoin.frontmatter.triggers.map(
-        trigger => {
-          const parsedTrigger = trigger.split('|')
-
-          return {
-            category: parsedTrigger[0],
-            time: parsedTrigger[1],
-            details: parsedTrigger[2],
-          }
-        }
-      )
 
       return (
         <div key={film.node.filmId}>
@@ -34,7 +22,7 @@ const IndexPage = ({ data }) => (
             title={film.node.title}
             duration={film.node.filmIdJoin.frontmatter.duration}
             description={film.node.overview}
-            movieTriggers={movieTriggers}
+            movieTriggers={film.node.filmIdJoin.frontmatter.triggers}
           />
         </div>
       )
@@ -45,7 +33,7 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const query = graphql`
-  query {
+  query FilmContents {
     allFilmNode(sort: { fields: title, order: ASC }) {
       edges {
         node {
@@ -53,7 +41,11 @@ export const query = graphql`
           filmIdJoin {
             frontmatter {
               duration
-              triggers
+              triggers {
+                category
+                description
+                eventTime
+              }
             }
           }
           title

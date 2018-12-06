@@ -34,8 +34,8 @@ const GuidelinesPage = ({ data }) => (
 export default GuidelinesPage
 
 export const query = graphql`
-  query {
-    file(relativePath: { regex: "/guidelines.md/" }) {
+  query GetGuidelinesMarkdown {
+    file(relativePath: { regex: "/content/guidelines/guidelines.md/" }) {
       childMarkdownRemark {
         html
       }
