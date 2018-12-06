@@ -30,7 +30,7 @@ const FilmTriggers = props => (
               color: 'hsl(0, 5%, 45%)',
             }}
           >
-            at {trigger.time} min
+            at {trigger.eventTime} min
           </p>
           <p
             style={{
@@ -40,7 +40,7 @@ const FilmTriggers = props => (
               textAlign: 'justify ',
             }}
           >
-            {trigger.details}
+            {trigger.description}
           </p>
         </div>
       )
