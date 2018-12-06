@@ -14,10 +14,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { name: 'filmId', label: 'FilmId' }
       - { name: 'duration', label: 'Film Duration' }
-          fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { name: 'filmId', label: 'FilmId' }
-      - { name: 'duration', label: 'Film Duration' }
       - {
           label: 'Triggers',
           name: 'triggers',
