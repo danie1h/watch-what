@@ -1,11 +1,11 @@
 {
   "name": "what-what",
   "description": "Box Office Movie Film Notification for Sexual Assualt & Depression Related Triggers",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "Daniel H. <dhumphreys.co@gmail.com>",
   "dependencies": {
     "axios": "^0.18.0",
-    "gatsby": "^2.0.19",
+    "gatsby": "^2.0.63",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.11",
