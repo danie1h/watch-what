@@ -1,0 +1,47 @@
+backend:
+  name: bitbucket
+  repo: danie1h/watch-what
+
+media_folder: src/uploads
+public_folder: /uploads
+
+collections:
+  - name: film_triggers
+    label: Film Triggers
+    folder: src/content/film-triggers
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { name: 'filmId', label: 'FilmId' }
+      - { name: 'duration', label: 'Film Duration' }
+          fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { name: 'filmId', label: 'FilmId' }
+      - { name: 'duration', label: 'Film Duration' }
+      - {
+          label: 'Triggers',
+          name: 'triggers',
+          widget: 'list',
+          fields:
+            [
+              { label: 'Category', name: 'category', widget: 'string' },
+              { label: 'Event Time', name: 'eventTime', widget: 'string' },
+              { label: 'Description', name: 'description', widget: 'string' },
+            ],
+        }
+  - name: guidelines
+    label: Guidelines
+    folder: src/content/guidelines
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { name: 'body', label: 'Guidelines Content', widget: 'markdown' }
+  - name: team
+    label: Team
+    folder: src/content/team
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
