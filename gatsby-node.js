@@ -5,7 +5,7 @@
 const axios = require('axios')
 const gatsbySourceFileSystem = require('gatsby-source-filesystem')
 
-const TMDB_API_KEY = 'ec848a93c99a2066df5df5721112e618'
+const TMDB_API_KEY = process.env.TMDB_API_KEY
 const getFilmData = () =>
   axios.get(
     `https://api.themoviedb.org/3/movie/now_playing?api_key=${TMDB_API_KEY}&language=en-US&page=1&region=US`
