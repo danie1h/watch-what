@@ -5,6 +5,8 @@
 const axios = require('axios')
 const gatsbySourceFileSystem = require('gatsby-source-filesystem')
 
+console.log(process.env.TEST_VAR)
+console.log(process.env.TMDB_API_KEY)
 const TMDB_API_KEY = 'ec848a93c99a2066df5df5721112e618'
 const getFilmData = () =>
   axios.get(
